@@ -26,23 +26,23 @@
    2. ALTER TABLE `addressbook` ADD COLUMN postal_code CHAR(8) NOT NULL;
    3. DROP TABLE `addressbook` 
 2. 完成sql训练营task02打卡，完成课后练习
-   -- prac1
+   prac1
 -- SELECT product_name, regist_date FROM `product` WHERE `regist_date` > '2009-04-28'
--- prac2
+   prac2
 /* 
    ans1：查询不到结果
    ans2：查询不到结果
    ans3：查询不到结果
 */
--- prac3
+   prac3
 -- SELECT `product_name` ,`sale_price` , `purchase_price` FROM `product` WHERE `sale_price` - `purchase_price` >= 500;
 -- SELECT `product_name` ,`sale_price` , `purchase_price` FROM `product` WHERE `purchase_price` - `sale_price` <= -500
--- prac4
+   prac4
 -- SELECT `product_name` , `product_type` , `sale_price` * 0.9 - `purchase_price` AS 'profit' FROM product
 -- 	 WHERE `sale_price` * 0.9 - `purchase_price` > 100 AND ( `product_name`='办公用品' OR `product_name` = '厨房用具'); 
--- prac4
+   prac5
 -- GROUP BY 条件没有包含在选择列中
--- prac5
+   prac6
 -- SELECT `product_type` , SUM( `sale_price`) , SUM( `purchase_price`)  FROM `product` GROUP BY `product_type` HAVING  SUM( `sale_price`) > SUM( `purchase_price`) *1.5  ;
--- prac6
+   prac7
 -- 日期，降序；出售价格，升序
