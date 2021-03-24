@@ -36,6 +36,6 @@
 -- SELECT `product_name` ,`sale_price` , `purchase_price` FROM `product` WHERE `purchase_price` - `sale_price` <= -500  
    4. SELECT `product_name` , `product_type` , `sale_price` * 0.9 - `purchase_price` AS 'profit' FROM product
 -- 	 WHERE `sale_price` * 0.9 - `purchase_price` > 100 AND ( `product_name`='办公用品' OR `product_name` = '厨房用具');   
-   5. GROUP BY 条件没有包含在选择列中  
+   5. GROUP BY 条件没有包含在选择列中;product_sum不可以sum聚合;where语句的位置错误
    6. SELECT `product_type` , SUM( `sale_price`) , SUM( `purchase_price`)  FROM `product` GROUP BY `product_type` HAVING  SUM( `sale_price`) > SUM( `purchase_price`) *1.5  ;  
    7. 日期，降序；出售价格，升序
