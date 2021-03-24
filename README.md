@@ -27,22 +27,22 @@
    3. DROP TABLE `addressbook` 
 2. 完成sql训练营task02打卡，完成课后练习
    1. 
--- SELECT product_name, regist_date FROM `product` WHERE `regist_date` > '2009-04-28'
+-- SELECT product_name, regist_date FROM `product` WHERE `regist_date` > '2009-04-28'  
    2. 
 /* 
    ans1：查询不到结果
    ans2：查询不到结果
    ans3：查询不到结果
-*/
+*/  
    3.
 -- SELECT `product_name` ,`sale_price` , `purchase_price` FROM `product` WHERE `sale_price` - `purchase_price` >= 500;
--- SELECT `product_name` ,`sale_price` , `purchase_price` FROM `product` WHERE `purchase_price` - `sale_price` <= -500
+-- SELECT `product_name` ,`sale_price` , `purchase_price` FROM `product` WHERE `purchase_price` - `sale_price` <= -500  
    4.
 -- SELECT `product_name` , `product_type` , `sale_price` * 0.9 - `purchase_price` AS 'profit' FROM product
--- 	 WHERE `sale_price` * 0.9 - `purchase_price` > 100 AND ( `product_name`='办公用品' OR `product_name` = '厨房用具'); 
+-- 	 WHERE `sale_price` * 0.9 - `purchase_price` > 100 AND ( `product_name`='办公用品' OR `product_name` = '厨房用具');   
    5.
--- GROUP BY 条件没有包含在选择列中
+-- GROUP BY 条件没有包含在选择列中  
    6.
--- SELECT `product_type` , SUM( `sale_price`) , SUM( `purchase_price`)  FROM `product` GROUP BY `product_type` HAVING  SUM( `sale_price`) > SUM( `purchase_price`) *1.5  ;
+-- SELECT `product_type` , SUM( `sale_price`) , SUM( `purchase_price`)  FROM `product` GROUP BY `product_type` HAVING  SUM( `sale_price`) > SUM( `purchase_price`) *1.5  ;  
    7.
 -- 日期，降序；出售价格，升序
