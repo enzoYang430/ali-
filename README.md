@@ -39,3 +39,21 @@
    5. GROUP BY 条件没有包含在选择列中;product_sum不可以sum聚合;where语句的位置错误
    6. SELECT `product_type` , SUM( `sale_price`) , SUM( `purchase_price`)  FROM `product` GROUP BY `product_type` HAVING  SUM( `sale_price`) > SUM( `purchase_price`) *1.5  ;  
    7. 日期，降序；出售价格，升序
+3. 完成sq训练营task03打卡，完成课后练习
+   1. 关联子查询有点难：CREATE VIEW AvgPriceByType AS 
+SELECT product_id,product_name,product_type,sale_price,
+		( SELECT AVG (sale_price)
+        FROM `product` p2
+        WHERE p1.product_type = p2.`product_type` 
+        GROUP BY p1.product_type) AS avg_sale_price
+FROM product p1;
+SELECT * FROM avgpricebytype;
+
+   2. IN和NOT IN中NULL的问题：-- SELECT * FROM `samplelike` WHERE `strcol` LIKE 'dd%';
+-- 取出purchase_price不是500，2800，5000的商品，不包括NULL
+-- NOT IN 参数中不能包含NULL！
+   3. 3.7和答案用了不一样的方法：SELECT COUNT( CASE WHEN sale_price <= 1000 THEN sale_price END ) AS 'low_price',
+COUNT( CASE WHEN sale_price BETWEEN  1001 AND  3000 THEN sale_price END) AS 'mid_price',
+COUNT( CASE WHEN sale_price > 3001 THEN sale_price END ) AS 'high_price'
+FROM `product`;
+      
